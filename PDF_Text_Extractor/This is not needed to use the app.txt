@@ -1,0 +1,1 @@
+This is not needed to use the app. It's an additional app to extract all the text from a PDF. In certain situations, you may find this useful.
