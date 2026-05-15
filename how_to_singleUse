@@ -1,0 +1,8 @@
+*make a copy of the Read4Me app folder and name the copy "Read4Me_b"
+*open a fresh terminal and paste the shit below
+
+cd ~/Desktop/Read4Me_b
+python3 -m venv venv
+source venv/bin/activate
+pip install kokoro soundfile sounddevice pypdf edge-tts pyttsx3 numpy misaki espeakng_loader
+python read4me.py
