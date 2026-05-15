@@ -1,4 +1,4 @@
-# Read4Me 🔊
+# Read4Me (Read for Me) 🔊
 
 A local, interactive text-to-speech reader for `.txt` and `.pdf` files.
 Just run it, follow the menus, and it reads your file aloud in a natural AI voice.
