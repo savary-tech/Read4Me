@@ -58,3 +58,53 @@ source venv/bin/activate
 pip install kokoro soundfile sounddevice pypdf edge-tts pyttsx3 numpy misaki espeakng_loader
 python read4me.py
 ```
+Still failing? Are you running python 3.13+ by chance? If you are getting an error where kokoro or spacy refuses to install. Try with Python 3.11.
+```
+sudo apt update
+
+sudo apt install -y \
+build-essential \
+zlib1g-dev \
+libncurses5-dev \
+libgdbm-dev \
+libnss3-dev \
+libssl-dev \
+libreadline-dev \
+libffi-dev \
+libsqlite3-dev \
+libbz2-dev \
+liblzma-dev \
+wget curl llvm tk-dev xz-utils cargo rustc
+
+cd /tmp
+
+wget https://www.python.org/ftp/python/3.11.13/Python-3.11.13.tgz
+
+tar -xvf Python-3.11.13.tgz
+
+cd Python-3.11.13
+
+./configure --enable-optimizations
+
+make -j$(nproc)
+
+sudo make altinstall
+
+#the 2 lines below are to avoid /temp running out of storage space, you can skip it if you know what you are doing.
+
+mkdir -p ~/bigtemp
+
+echo 'export TMPDIR=$HOME/bigtemp' >> ~/.bashrc
+
+#reboot your machine
+
+source ~/.bashrc
+
+python3.11 -m venv ~/kokoro-env
+
+source ~/kokoro-env/bin/activate
+
+pip install --upgrade pip setuptools wheel
+
+pip install --no-cache-dir kokoro
+```
