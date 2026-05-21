@@ -58,7 +58,7 @@ source venv/bin/activate
 pip install kokoro soundfile sounddevice pypdf edge-tts pyttsx3 numpy misaki espeakng_loader
 python read4me.py
 ```
-Still failing? Are you running python 3.13+ by chance? If you are getting an error where kokoro or spacy refuses to install. Try with Python 3.11.
+Still failing? Are you running python 3.13+ by chance? If you are getting an error where kokoro or spacy refuses to install, try with Python 3.11.
 ```
 sudo apt update
 
