@@ -107,7 +107,6 @@ source ~/kokoro-env/bin/activate
 pip install --upgrade pip setuptools wheel
 
 pip install --no-cache-dir kokoro
-pip install soundfile sounddevice pypdf numpy misaki espeakng_loader
 ```
 Did the above steps solve your problem? If so, in the future, you may need to open the app using the steps below
 ```
@@ -116,5 +115,6 @@ source kokoro-env/bin/activate
 pip install --upgrade pip setuptools wheel
 python -c "import kokoro"
 pip install --no-cache-dir kokoro
+pip install soundfile sounddevice pypdf numpy misaki espeakng_loader
 python read4me.py
 ```
