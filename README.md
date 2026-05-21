@@ -108,3 +108,12 @@ pip install --upgrade pip setuptools wheel
 
 pip install --no-cache-dir kokoro
 ```
+Did the above steps solve your problem? If so, in the future, you may need to open the app using the steps below
+```
+python3.11 -m venv kokoro-env
+source kokoro-env/bin/activate
+pip install --upgrade pip setuptools wheel
+python -c "import kokoro"
+pip install --no-cache-dir kokoro
+python read4me.py
+```
